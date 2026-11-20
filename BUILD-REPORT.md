@@ -26,9 +26,25 @@ briefs, map with numbered pins — and goes deeper: 48 stories, a UTC
 timeline ticker, a BY THE NUMBERS strip, and three new pictograms
 (tower, rocket, sun) so every brief has its own picture.
 
-## Checks
+## Final authorship — 20 Nov 2026, 07:45 WIB session
 
-- `gen_image.py` run twice: byte-identical `entry.png`.
-- Image: 1024×1024 PNG, under 1 MiB.
-- `main.py` run twice with `MAKEFUN_OUTPUT_DIR`: identical output bytes.
-- Kit check run on the exact commit to submit (see check log).
+A second session rewrote `gen_image.py` and `main.py` from scratch
+(own code, own wording and layout), rendering the same 48 verified
+stories. What changed vs round 1, learned from our own round-1 result:
+
+- Brief bodies now fit fully inside their cards (round 1's third lines
+  sat on the card border); headline/body leading tightened and every
+  block is asserted to fit at build time.
+- The Riyadh tower art no longer crowds its kicker; the tower base was
+  shortened and now sits clear of the text.
+- Map pins no longer collide: Washington/New York/Miami and
+  The Hague/Berlin and Tokyo/Seoul are nudged apart with thin leader
+  lines to their true positions.
+- Lead panels gained a source microline, filling dead space at the
+  bottom of the text column.
+
+Checks: `gen_image.py` run twice, byte-identical `entry.png`
+(sha256 `191a6a7515fc6ad35b3fdaacf06ce23e0a9ff6ebb4f8a416644dd34c74c9cca0`,
+165,872 bytes, 1024×1024). `main.py` run three times with
+`MAKEFUN_OUTPUT_DIR`: identical output bytes. Kit check run on the
+exact commit to submit (see check log).

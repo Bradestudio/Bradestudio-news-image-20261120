@@ -11,3 +11,9 @@ session, generated `entry.png` twice to prove determinism, created the
 public GitHub repository, pushed the commit, and ran the kit checks.
 
 No other session touched the code in this repository.
+
+Final authorship: a second session (20 November 2026, 07:45 WIB) rewrote
+`gen_image.py` and `main.py` from scratch in its own session — same 48
+verified stories, own wording, own layout and pictograms — regenerated
+`entry.png` twice to prove determinism, and pushed the new commit. The
+parent agent packages the authorship bundle and submits.
